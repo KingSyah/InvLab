@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login — Inventaris Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+<div class="bg-blobs">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+</div>
+
+<div class="card-wrap">
+  <div class="card">
+
+    <div class="card-header">
+      <div class="logo-icon" id="logo-icon">📋</div>
+      <div class="logo-text">
+        <h1>Inventaris Lab</h1>
+        <p>v2.1 · Sheets Sync · Secure</p>
+      </div>
+      <button class="theme-btn" id="btn-theme" title="Ganti tema">🌙</button>
+    </div>
+
+    <div class="notice" id="notice-banner">
+      <div class="notice-icon" id="notice-icon">📦</div>
+      <div class="notice-body">
+        <div class="notice-label">📣 Barang Terbaru Ditambahkan</div>
+        <div class="notice-text">
+          <span class="notice-item" id="notice-item">Belum ada barang</span>
+          <span id="notice-funny"></span>
+        </div>
+        <div class="notice-time" id="notice-time"></div>
+      </div>
+    </div>
+
+    <div class="card-body">
+      <div class="section-title">Masuk ke Sistem</div>
+
+      <div class="attempt-bar">
+        <div class="attempt-dot" id="dot-1"></div>
+        <div class="attempt-dot" id="dot-2"></div>
+        <div class="attempt-dot" id="dot-3"></div>
+      </div>
+
+      <div class="error-msg" id="error-msg">
+        <span>🔒</span><span id="error-text">Kredensial salah!</span>
+      </div>
+
+      <div class="locked-msg" id="locked-msg">
+        <div class="locked-icon">🔐</div>
+        <h3>Akses Dikunci Sementara</h3>
+        <p>Terlalu banyak percobaan gagal.<br>Tunggu sebelum mencoba lagi.</p>
+        <div class="countdown" id="countdown">30</div>
+      </div>
+
+      <div id="login-fields">
+        <div class="form-group" style="margin-bottom:12px">
+          <label>Username</label>
+          <div class="input-wrap">
+            <input class="fc" type="text" id="f-user" placeholder="admin" autocomplete="username" spellcheck="false">
+            <span class="fc-icon">👤</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <div class="input-wrap">
+            <input class="fc" type="password" id="f-pass" placeholder="••••••••" autocomplete="current-password" style="padding-right:42px">
+            <button class="pw-toggle" id="pw-toggle" type="button" tabindex="-1">👁️</button>
+          </div>
+          <div class="capslock-warn" id="capslock-warn">⚠️ Caps Lock aktif!</div>
+        </div>
+        <button class="btn-login" id="btn-login" type="button">
+          <span id="btn-login-text">🔓 Masuk</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="card-footer">
+      <p>Sistem inventaris internal · Akses terbatas<br>
+      Hubungi admin jika lupa kredensial</p>
+    </div>
+
+  </div>
+</div>
+
+<script src="login.js"></script>
+</body>
+</html>
