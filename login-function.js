@@ -8,14 +8,14 @@
 //                    (jangan share ke siapapun, dipakai untuk enkripsi HMAC)
 //
 // Untuk setiap user, tambahkan DUA variabel dengan format:
-//   USER_1         = username,  misal: "admin"
-//   PASS_1         = password,  misal: "Musiq1234"
+//   USER_1         = username,  misal: "a***"
+//   PASS_1         = password,  misal: "*****"
 //
-//   USER_2         = username,  misal: "labtek"
-//   PASS_2         = password,  misal: "lab@elektro"
+//   USER_2         = username,  misal: "l***"
+//   PASS_2         = password,  misal: "l****"
 //
-//   USER_3         = username,  misal: "operator"
-//   PASS_3         = password,  misal: "ops1234!"
+//   USER_3         = username,  misal: "o****"
+//   PASS_3         = password,  misal: "o****"
 //
 // Untuk tambah user baru: cukup tambah pasangan USER_4 + PASS_4 di Netlify.
 // Untuk hapus user: hapus pasangan USER_N + PASS_N dari Netlify.
