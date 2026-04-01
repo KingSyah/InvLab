@@ -1,31 +1,3 @@
-// netlify/functions/login.js
-//
-// ── CARA SET ENV VARIABLES DI NETLIFY ──────────────────────────────────────
-// Dashboard → Site → Site configuration → Environment variables → Add variable
-//
-// Wajib diisi:
-//   TOKEN_SECRET   = kode rahasia bebas, misal: "kunci-lab-elektro-2024"
-//                    (jangan share ke siapapun, dipakai untuk enkripsi HMAC)
-//
-// Untuk setiap user, tambahkan DUA variabel dengan format:
-//   USER_1         = username,  misal: "a***"
-//   PASS_1         = password,  misal: "*****"
-//
-//   USER_2         = username,  misal: "l***"
-//   PASS_2         = password,  misal: "l****"
-//
-//   USER_3         = username,  misal: "o****"
-//   PASS_3         = password,  misal: "o****"
-//
-// Untuk tambah user baru: cukup tambah pasangan USER_4 + PASS_4 di Netlify.
-// Untuk hapus user: hapus pasangan USER_N + PASS_N dari Netlify.
-// Tidak perlu edit kode sama sekali.
-//
-// Password disimpan PLAIN di env var Netlify — aman karena hanya bisa dibaca
-// di server Netlify, tidak pernah dikirim ke browser.
-// Di server, password di-hash SHA-256 lalu di-HMAC dengan TOKEN_SECRET.
-// ────────────────────────────────────────────────────────────────────────────
-
 const crypto = require('crypto');
 
 // Header CORS — wajib untuk request dari browser
