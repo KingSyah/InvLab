@@ -1,0 +1,23 @@
+[build]
+  functions = "netlify/functions"
+  publish = "."
+
+[build.environment]
+  SECRETS_SCAN_OMIT_KEYS = "USER_1,PASS_1,USER_2,PASS_2,USER_3,PASS_3,TOKEN_SECRET"
+
+[[redirects]]
+  from = "/login"
+  to = "/login.html"
+  status = 200
+
+[[redirects]]
+  from = "/"
+  to = "/login.html"
+  status = 302
+  force = false
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
